@@ -18,6 +18,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.santosediego.course.entities.enums.OrderStatus;
+import com.santosediego.course.entities.pk.OrdemItemPK;
 
 @Entity
 @Table(name = "tb_order")
@@ -80,6 +81,15 @@ public class Order implements Serializable {
 			this.orderStatus = orderStatus.getCode();
 		}
 		
+	}
+	
+	public Double getTotal() {
+		double sum = 0;
+		
+		for(OrderItem x : items) {
+			sum += x.getSubTotal();
+		}
+		return sum;
 	}
 
 	public User getClient() {
