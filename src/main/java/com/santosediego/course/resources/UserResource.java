@@ -1,4 +1,4 @@
-package com.santosediego.course.entities.resources;
+package com.santosediego.course.resources;
 
 import java.net.URI;
 import java.util.List;
