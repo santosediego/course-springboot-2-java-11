@@ -18,7 +18,6 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.santosediego.course.entities.enums.OrderStatus;
-import com.santosediego.course.entities.pk.OrdemItemPK;
 
 @Entity
 @Table(name = "tb_order")
